@@ -588,14 +588,14 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 		this.closed.set(false);
 		this.active.set(true);
 
-		if (logger.isDebugEnabled()) {
-			if (logger.isTraceEnabled()) {
-				logger.trace("Refreshing " + this);
-			}
-			else {
-				logger.debug("Refreshing " + getDisplayName());
-			}
-		}
+//		if (logger.isDebugEnabled()) {
+//			if (logger.isTraceEnabled()) {
+//				logger.trace("Refreshing " + this);
+//			}
+//			else {
+//				logger.debug("Refreshing " + getDisplayName());
+//			}
+//		}
 
 		// Initialize any placeholder property sources in the context environment.
 		initPropertySources();

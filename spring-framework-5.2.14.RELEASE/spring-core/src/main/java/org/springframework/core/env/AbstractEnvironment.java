@@ -369,12 +369,12 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 	 * @see #setDefaultProfiles
 	 */
 	protected void validateProfile(String profile) {
-		if (!StringUtils.hasText(profile)) {
-			throw new IllegalArgumentException("Invalid profile [" + profile + "]: must contain text");
-		}
-		if (profile.charAt(0) == '!') {
-			throw new IllegalArgumentException("Invalid profile [" + profile + "]: must not begin with ! operator");
-		}
+//		if (!StringUtils.hasText(profile)) {
+//			throw new IllegalArgumentException("Invalid profile [" + profile + "]: must contain text");
+//		}
+//		if (profile.charAt(0) == '!') {
+//			throw new IllegalArgumentException("Invalid profile [" + profile + "]: must not begin with ! operator");
+//		}
 	}
 
 	@Override
@@ -396,13 +396,13 @@ public abstract class AbstractEnvironment implements ConfigurableEnvironment {
 					try {
 						return System.getProperty(attributeName);
 					}
-					catch (AccessControlException ex) {
-						if (logger.isInfoEnabled()) {
-							logger.info("Caught AccessControlException when accessing system property '" +
-									attributeName + "'; its value will be returned [null]. Reason: " + ex.getMessage());
-						}
-						return null;
-					}
+//					catch (AccessControlException ex) {
+//						if (logger.isInfoEnabled()) {
+//							logger.info("Caught AccessControlException when accessing system property '" +
+//									attributeName + "'; its value will be returned [null]. Reason: " + ex.getMessage());
+//						}
+//						return null;
+//					}
 				}
 			};
 		}
