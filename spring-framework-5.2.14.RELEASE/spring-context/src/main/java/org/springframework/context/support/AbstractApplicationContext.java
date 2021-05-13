@@ -520,6 +520,9 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 			prepareRefresh();
 
 			// Tell the subclass to refresh the internal bean factory.
+			// 配置文件会解析成一个个Bean定义，注册到BeaFactory中，
+			// 还未初始化，只是配置信息都提取出来了
+			// 注册也只是将这些信息都保存到了注册中心（说到底核心是一个 beanName -> beanDefinition 的 Map
 			ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();
 
 			// Prepare the bean factory for use in this context.
@@ -588,14 +591,14 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 		this.closed.set(false);
 		this.active.set(true);
 
-//		if (logger.isDebugEnabled()) {
-//			if (logger.isTraceEnabled()) {
-//				logger.trace("Refreshing " + this);
-//			}
-//			else {
-//				logger.debug("Refreshing " + getDisplayName());
-//			}
-//		}
+		if (logger.isDebugEnabled()) {
+			if (logger.isTraceEnabled()) {
+				logger.trace("Refreshing " + this);
+			}
+			else {
+				logger.debug("Refreshing " + getDisplayName());
+			}
+		}
 
 		// Initialize any placeholder property sources in the context environment.
 		initPropertySources();

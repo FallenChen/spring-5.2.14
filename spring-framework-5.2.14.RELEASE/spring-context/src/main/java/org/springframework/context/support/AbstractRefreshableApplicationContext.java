@@ -126,6 +126,7 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
 		try {
 			// 创建了一个功能最饱和的bean，DefaultListableBeanFactory，后续的操作都是交给它
 			DefaultListableBeanFactory beanFactory = createBeanFactory();
+			// todo ???
 			beanFactory.setSerializationId(getId());
 			customizeBeanFactory(beanFactory);
 			loadBeanDefinitions(beanFactory);
