@@ -87,6 +87,7 @@ class ApplicationContextAwareProcessor implements BeanPostProcessor {
 		AccessControlContext acc = null;
 
 		if (System.getSecurityManager() != null) {
+			// todo ???
 			acc = this.applicationContext.getBeanFactory().getAccessControlContext();
 		}
 
