@@ -36,6 +36,7 @@ import org.springframework.beans.BeansException;
  * @param <T> the object type
  * @see FactoryBean
  */
+// 间接查找bean方式 没有实时生成，查找的时候才生成
 @FunctionalInterface
 public interface ObjectFactory<T> {
 
