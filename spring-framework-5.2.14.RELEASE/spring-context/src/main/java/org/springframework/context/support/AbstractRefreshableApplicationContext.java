@@ -72,6 +72,7 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
 
 	/** Bean factory for this context. */
 	@Nullable
+	// 组合进来的 beanFactory，后续使用它进行代理 进行getBean()等的工作
 	private volatile DefaultListableBeanFactory beanFactory;
 
 
