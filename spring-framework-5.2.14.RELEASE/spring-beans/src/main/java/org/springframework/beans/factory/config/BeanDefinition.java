@@ -31,6 +31,11 @@ import org.springframework.lang.Nullable;
  * {@link BeanFactoryPostProcessor} to introspect and modify property values
  * and other bean metadata.
  *
+ * Bean 的类名
+ * Bean行为配置元素，如作用域、自动绑定的模式、生命周期回调
+ * 其它Bean引用，又称合作者（Collaborators)或者依赖 (Dependencies)
+ * 配置设置，比如Bean属性(Properties)
+ *
  * @author Juergen Hoeller
  * @author Rob Harrop
  * @since 19.03.2004

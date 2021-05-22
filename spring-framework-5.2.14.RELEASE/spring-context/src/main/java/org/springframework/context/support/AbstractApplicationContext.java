@@ -515,6 +515,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 
 	@Override
 	public void refresh() throws BeansException, IllegalStateException {
+		// 任何一个application context 可以在任意代码里面进行创建
 		synchronized (this.startupShutdownMonitor) {
 			// Prepare this context for refreshing.
 			prepareRefresh();
@@ -523,6 +524,8 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 			// 配置文件会解析成一个个Bean定义，注册到BeaFactory中，
 			// 还未初始化，只是配置信息都提取出来了
 			// 注册也只是将这些信息都保存到了注册中心（说到底核心是一个 beanName -> beanDefinition 的 Map
+			// 创建了非常重要，主力干活的DefaultListAbleBeanFactory
+			// 完成实例化
 			ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();
 
 			// Prepare the bean factory for use in this context.
