@@ -32,6 +32,8 @@ public interface BeanNameGenerator {
 	 * @param registry the bean definition registry that the given definition
 	 * is supposed to be registered with
 	 * @return the generated bean name
+	 *
+	 * 默认或注解
 	 */
 	String generateBeanName(BeanDefinition definition, BeanDefinitionRegistry registry);
 

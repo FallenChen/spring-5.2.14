@@ -36,6 +36,16 @@ import org.springframework.lang.Nullable;
  * 其它Bean引用，又称合作者（Collaborators)或者依赖 (Dependencies)
  * 配置设置，比如Bean属性(Properties)
  *
+ * Class	Bean全类名，必须是具体类，不能用抽象类或接口
+ * Name		Bean的名称或者ID
+ * Scope	Bean的作用域（singleton、prototype）
+ * Constructor arguments	Bean构造器参数（用于依赖注入）
+ * Properties	Bean属性设置（用于依赖注入）
+ * Autowiring mode	Bean自动绑定模式
+ * Lazy initialization mode		Bean延迟初始化模式
+ * Initialization method	Bean初始化回调方法名称
+ * Destruction method	Bean销毁回调方法名称
+ *
  * @author Juergen Hoeller
  * @author Rob Harrop
  * @since 19.03.2004
